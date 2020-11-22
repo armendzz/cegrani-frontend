@@ -1,13 +1,57 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 ">
+          <Featured-content />
+          <Weather />
+        </div>
+        <div class="col-lg-4 ">
+          <Login />
+          <Aqi class="mt-2" />
+          <Profile class="mt-2"  />
+        </div>
+      </div>
+      <ShortGallery />
+      <div class="row">
+        <div class="col-lg-8 ">
+          <div class="alert mt-2 alert-info" role="alert">
+            Identifikohu autokton duke krijuar nje email address
+            <strong>@cegrani.mk</strong>
+            <br />
+            <a href="/mail">Kliko Ketu per te krijuar nje Email </a>
+          </div>
+        </div>
+        <div class="col-lg-4 ">
+          <Info class="mt-2" />
+          <Ads class="mt-2" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import FeaturedContent from "../components/FeaturedContent.vue";
+import Weather from "../components/Weather.vue";
+import ShortGallery from "../components/ShortGallery.vue";
+import Login from '../components/widgets/Login.vue';
+import Profile from '../components/widgets/Profile.vue';
+import Info from '../components/widgets/Info.vue';
+import Aqi from '../components/widgets/Aqi.vue';
+import Ads from '../components/widgets/Ads.vue';
 export default {
   name: "Home",
-  components: {}
+  components: {
+    FeaturedContent,
+    Weather,
+    ShortGallery,
+    Login,
+    Profile,
+    Ads,
+    Aqi,
+    Info
+  },
 };
 </script>
+<style scoped></style>

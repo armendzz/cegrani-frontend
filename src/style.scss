@@ -1,3 +1,8 @@
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
 @import 'node_modules/bootstrap-vue/src/index.scss';
 @import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
+
+.card-header {
+    background-color: #046b9b;
+    color: white;
+}

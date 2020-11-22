@@ -12,35 +12,7 @@
         <div class="col-lg-5">
           <img src="@/assets/1.png" width="100%" alt="" />
         </div>
-        <div class="col-md-7 d-none d-md-none d-lg-block">
-          <div class="d-flex justify-content-end">
-            <b-form @submit="onSubmit" @reset="onReset" v-if="show">
-              <b-form-group id="input-group-1" label-for="input-1">
-                <b-form-input
-                  id="input-1"
-                  v-model="form.email"
-                  type="email"
-                  required
-                  placeholder="E-maili Juaj"
-                ></b-form-input>
-              </b-form-group>
-
-              <b-form-group id="input-group-2" label-for="input-2">
-                <b-form-input
-                  id="input-2"
-                  v-model="form.name"
-                  type="password"
-                  required
-                  placeholder="Fjalkalimi Juaj"
-                ></b-form-input>
-              </b-form-group>
-              <b-button type="submit" class="mr-2" variant="success"
-                >Lajmerohu</b-button
-              >
-              <b-button type="reset" variant="primary">Regjistrohu</b-button>
-            </b-form>
-          </div>
-        </div>
+    
       </div>
     </b-container>
     <b-navbar class="mt-3 " type="dark" id="menu" toggleable="lg">
@@ -63,11 +35,11 @@
             <b-nav-item class="hvr-icon-pulse" href="#"
               ><i class="fas fa-university hvr-icon"></i> B. Lokale</b-nav-item
             >
-            <b-nav-item class="hvr-icon-pulse" href="#"
-              ><i class="fas fa-globe-europe hvr-icon"></i> Historia</b-nav-item
+             <b-nav-item class="hvr-icon-pulse" href="#"
+              ><i class="fas fa-anchor hvr-icon"></i> Rezistenca</b-nav-item
             >
             <b-nav-item class="hvr-icon-pulse" href="#"
-              ><i class="fas fa-photo-video hvr-icon"></i> Galeria</b-nav-item
+              ><i class="fas fa-globe-europe hvr-icon"></i> Historia</b-nav-item
             >
             <b-nav-item class="hvr-icon-pulse" href="#"
               ><i class="fas fa-photo-video hvr-icon"></i> Galeria</b-nav-item
@@ -88,6 +60,10 @@
         </b-collapse>
       </b-container>
     </b-navbar>
+    <div class="container">
+     <!-- Todo: nese eshte i loguar nuk duhet te shfaqet -->
+      <div class="alert alert-warning mt-2">Ju Mund te Regjistroheni ne kete faqe dhe te shperndani Fotot/Videot/Artikujt tuaja ne kete arhive te fshatit tone. (Autori qe poston do ti shfaqet Emri)</div>
+    </div>
   </div>
 </template>
 

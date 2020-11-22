@@ -1,18 +1,17 @@
 <template>
   <div>
-     <div class="container">
-  <div class="top-bar">
-   <span>{{ new Date() | moment("D MMMM YYYY") }} </span>
-    <span> E-mail@Cegrani.mk </span>
-     <span> Inbox </span>
+    <div class="container">
+      <div class="top-bar">
+        <span>{{ new Date() | moment("D MMMM YYYY") }} </span>
+        <span> E-mail@Cegrani.mk </span>
+        <span> Inbox </span>
+      </div>
     </div>
-  </div>
     <b-container>
       <div class="mt-3 row">
         <div class="col-lg-5">
           <img src="@/assets/1.png" width="100%" alt="" />
         </div>
-    
       </div>
     </b-container>
     <b-navbar class="mt-3 " type="dark" id="menu" toggleable="lg">
@@ -35,7 +34,7 @@
             <b-nav-item class="hvr-icon-pulse" href="#"
               ><i class="fas fa-university hvr-icon"></i> B. Lokale</b-nav-item
             >
-             <b-nav-item class="hvr-icon-pulse" href="#"
+            <b-nav-item class="hvr-icon-pulse" href="#"
               ><i class="fas fa-anchor hvr-icon"></i> Rezistenca</b-nav-item
             >
             <b-nav-item class="hvr-icon-pulse" href="#"
@@ -48,38 +47,61 @@
               <template slot="button-content">
                 <i class="fas fa-plus hvr-icon"></i> Me Shume</template
               >
-              <b-dropdown-item class="hvr-icon-pulse" href="#"><i class="fas fa-graduation-cap hvr-icon"></i> Sh.F. Perparimi</b-dropdown-item>
-              <b-dropdown-item class="hvr-icon-pulse" href="#"><i class="fas fa-fingerprint hvr-icon"></i> <span class="mr-1"></span>Personalitete</b-dropdown-item>
-              <b-dropdown-item class="hvr-icon-pulse" href="#"><i class="fas fa-child hvr-icon"></i> <span class="mr-2"></span>SHKA Jahi Hasani</b-dropdown-item>
-              <b-dropdown-item class="hvr-icon-pulse" href="#"><i class="fas fa-hand-holding-heart hvr-icon"></i> <span class="mr-1"></span>FH Cegrani-Zvicer</b-dropdown-item>
-              <b-dropdown-item class="hvr-icon-pulse" href="#"><i class="fas fa-hand-holding-heart hvr-icon"></i> <span class="mr-1"></span>FH Cegrani-Austri</b-dropdown-item>
-              <b-dropdown-item class="hvr-icon-pulse" href="#"><i class="fas fa-phone-alt hvr-icon"></i> <span class="mr-1"></span>Kontakt</b-dropdown-item>
-              <b-dropdown-item class="hvr-icon-pulse" href="#"><i class="fas fa-info hvr-icon"></i> <span class="mr-3"></span>Reth Faqes</b-dropdown-item>
+              <b-dropdown-item class="hvr-icon-pulse" href="#"
+                ><i class="fas fa-graduation-cap hvr-icon"></i> Sh.F.
+                Perparimi</b-dropdown-item
+              >
+              <b-dropdown-item class="hvr-icon-pulse" href="#"
+                ><i class="fas fa-fingerprint hvr-icon"></i>
+                <span class="mr-1"></span>Personalitete</b-dropdown-item
+              >
+              <b-dropdown-item class="hvr-icon-pulse" href="#"
+                ><i class="fas fa-child hvr-icon"></i>
+                <span class="mr-2"></span>SHKA Jahi Hasani</b-dropdown-item
+              >
+              <b-dropdown-item class="hvr-icon-pulse" href="#"
+                ><i class="fas fa-hand-holding-heart hvr-icon"></i>
+                <span class="mr-1"></span>FH Cegrani-Zvicer</b-dropdown-item
+              >
+              <b-dropdown-item class="hvr-icon-pulse" href="#"
+                ><i class="fas fa-hand-holding-heart hvr-icon"></i>
+                <span class="mr-1"></span>FH Cegrani-Austri</b-dropdown-item
+              >
+              <b-dropdown-item class="hvr-icon-pulse" href="#"
+                ><i class="fas fa-phone-alt hvr-icon"></i>
+                <span class="mr-1"></span>Kontakt</b-dropdown-item
+              >
+              <b-dropdown-item class="hvr-icon-pulse" href="#"
+                ><i class="fas fa-info hvr-icon"></i>
+                <span class="mr-3"></span>Reth Faqes</b-dropdown-item
+              >
             </b-nav-item-dropdown>
           </b-navbar-nav>
         </b-collapse>
       </b-container>
     </b-navbar>
     <div class="container">
-     <!-- Todo: nese eshte i loguar nuk duhet te shfaqet -->
-      <div class="alert alert-warning mt-2">Ju Mund te Regjistroheni ne kete faqe dhe te shperndani Fotot/Videot/Artikujt tuaja ne kete arhive te fshatit tone. (Autori qe poston do ti shfaqet Emri)</div>
+      <!-- Todo: nese eshte i loguar nuk duhet te shfaqet -->
+      <div class="alert alert-warning mt-2">
+        Ju Mund te Regjistroheni ne kete faqe dhe te shperndani
+        Fotot/Videot/Artikujt tuaja ne kete arhive te fshatit tone. (Autori qe
+        poston do ti shfaqet Emri)
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
-  
   data() {
     return {
       form: {
         email: "",
         name: "",
         food: null,
-        checked: [],
+        checked: []
       },
-      show: true,
+      show: true
     };
   },
   methods: {
@@ -97,10 +119,9 @@ export default {
       this.$nextTick(() => {
         this.show = true;
       });
-    },
-  },
-    
-}
+    }
+  }
+};
 </script>
 
 <style>
@@ -114,7 +135,7 @@ export default {
 }
 
 .dropdown-item {
-    color: #1291cd !important;
+  color: #1291cd !important;
   font-family: "Spectral", serif;
   font-size: 1.3rem;
   display: inline-block;
@@ -155,18 +176,15 @@ export default {
 }
 
 @media only screen and (max-width: 1200px) {
-
- #menu .nav-link {
- 
-  font-size: 1.1rem !important;
- }
-
+  #menu .nav-link {
+    font-size: 1.1rem !important;
+  }
 }
 
 #menu .nav-link {
   color: white !important;
   font-family: "Spectral", serif;
-    font-size: 1.3rem;
+  font-size: 1.3rem;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);

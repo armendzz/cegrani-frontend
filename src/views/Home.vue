@@ -9,7 +9,7 @@
         <div class="col-lg-4 ">
           <Login />
           <Aqi class="mt-2" />
-          <Profile class="mt-2"  />
+          <Profile class="mt-2" />
         </div>
       </div>
       <ShortGallery />
@@ -35,11 +35,11 @@
 import FeaturedContent from "../components/FeaturedContent.vue";
 import Weather from "../components/Weather.vue";
 import ShortGallery from "../components/ShortGallery.vue";
-import Login from '../components/widgets/Login.vue';
-import Profile from '../components/widgets/Profile.vue';
-import Info from '../components/widgets/Info.vue';
-import Aqi from '../components/widgets/Aqi.vue';
-import Ads from '../components/widgets/Ads.vue';
+import Login from "../components/widgets/Login.vue";
+import Profile from "../components/widgets/Profile.vue";
+import Info from "../components/widgets/Info.vue";
+import Aqi from "../components/widgets/Aqi.vue";
+import Ads from "../components/widgets/Ads.vue";
 export default {
   name: "Home",
   components: {
@@ -51,7 +51,7 @@ export default {
     Ads,
     Aqi,
     Info
-  },
+  }
 };
 </script>
 <style scoped></style>

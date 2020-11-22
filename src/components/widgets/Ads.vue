@@ -27,7 +27,6 @@
         </Slider>
         Vendos Reklamen Tuaj Ketu
       </div>
-      
     </div>
   </div>
 </template>
@@ -43,8 +42,8 @@ export default {
     },
     onSlideChangeEnd(currentPage, el) {
       console.log("onSlideChangeEnd", currentPage, el);
-    },
-  },
+    }
+  }
 };
 </script>
 

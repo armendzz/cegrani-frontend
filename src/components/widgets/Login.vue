@@ -3,10 +3,9 @@
     <div class="card">
       <div class="card-header">Lajmerohu</div>
       <div class="card-body">
-        <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+        <div>
           <b-form-group id="input-group-1" label-for="input-1">
             <b-form-input
-              id="input-1"
               v-model="form.email"
               type="email"
               required
@@ -16,18 +15,17 @@
 
           <b-form-group id="input-group-2" label-for="input-2">
             <b-form-input
-              id="input-2"
-              v-model="form.name"
+              v-model="form.password"
               type="password"
               required
               placeholder="Fjalkalimi Juaj"
             ></b-form-input>
           </b-form-group>
-          <b-button type="submit" class="mr-2" variant="success"
+          <b-button @click="onSubmit()" class="mr-2" variant="success"
             >Lajmerohu</b-button
           >
-          <b-button type="reset" variant="primary">Regjistrohu</b-button>
-        </b-form>
+          <b-button variant="primary">Regjistrohu</b-button>
+        </div>
       </div>
     </div>
   </div>
@@ -39,29 +37,27 @@ export default {
     return {
       form: {
         email: "",
-        name: "",
-        food: null,
-        checked: []
+        password: "",
       },
-      show: true
     };
   },
   methods: {
-    onSubmit(evt) {
-      evt.preventDefault();
-      alert(JSON.stringify(this.form));
+    onSubmit() {
+       this.$store
+        .dispatch("currentUser/login", {
+          email: this.form.email,
+          password: this.form.password
+        })
+        // eslint-disable-next-line
+        .then(response => {
+          this.$router.push({ name: "Home" });
+          this.$store.dispatch("currentUser/checkAccessToken");
+          this.$store.dispatch("currentUser/getUser");
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
     },
-    onReset(evt) {
-      evt.preventDefault();
-      this.form.email = "";
-      this.form.name = "";
-      this.form.food = null;
-      this.form.checked = [];
-      this.show = false;
-      this.$nextTick(() => {
-        this.show = true;
-      });
-    }
   }
 };
 </script>

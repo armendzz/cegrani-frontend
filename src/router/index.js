@@ -4,43 +4,73 @@ import Home from "../views/Home.vue";
 import Login from "../views/auth/Login.vue";
 import Register from "../views/auth/Register.vue";
 import ResetPass from "../views/auth/ResetPass.vue";
+import Profile from "../views/Profile.vue";
 Vue.use(VueRouter);
+
+function guardMyroute(to, from, next) {
+  let isLogged = new Boolean();
+  if (localStorage.getItem("user_access_token") === null) {
+    isLogged = false;
+  } else {
+    isLogged = true;
+  }
+
+  if (isLogged) {
+    next(); // allow to enter route
+  } else {
+    next("/login"); // go to '/login';
+  }
+}
+
+function ifLoggedInPerventLoginandRegister(to, from, next) {
+  let isLogged = new Boolean();
+  if (localStorage.getItem("user_access_token") === null) {
+    isLogged = false;
+  } else {
+    isLogged = true;
+  }
+
+  if (!isLogged) {
+    next(); // allow to enter route
+  } else {
+    next("/"); // go to '/login';
+  }
+}
 
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
+  },
+  {
+    path: "/profile",
+    name: "Profile",
+    beforeEnter: guardMyroute,
+    component: Profile,
   },
   {
     path: "/login",
     name: "Login",
-    component: Login
+    beforeEnter: ifLoggedInPerventLoginandRegister,
+    component: Login,
   },
   {
     path: "/register",
     name: "Register",
-    component: Register
+    beforeEnter: ifLoggedInPerventLoginandRegister,
+    component: Register,
   },
-  
+
   {
     path: "/resetpass",
     name: "ResetPass",
-    component: ResetPass
+    component: ResetPass,
   },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
-  }
 ];
 
 const router = new VueRouter({
-  routes
+  routes,
 });
 
 export default router;

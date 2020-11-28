@@ -13,6 +13,10 @@ export default {
   components: {
     Header,
     Footer
+  },
+  mounted() {
+    this.$store.dispatch("currentUser/checkAccessToken");
+    this.$store.dispatch("currentUser/getUser");
   }
 };
 </script>

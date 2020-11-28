@@ -37,11 +37,13 @@ import Slider from "vue-plain-slider";
 export default {
   components: { Slider },
   methods: {
+    // eslint-disable-next-line
     onSlideChangeStart(currentPage, el) {
-      console.log("onSlideChangeStart", currentPage, el);
+      // console.log("onSlideChangeStart", currentPage, el);
     },
+    // eslint-disable-next-line
     onSlideChangeEnd(currentPage, el) {
-      console.log("onSlideChangeEnd", currentPage, el);
+      //  console.log("onSlideChangeEnd", currentPage, el);
     }
   }
 };

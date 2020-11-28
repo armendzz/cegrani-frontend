@@ -1,15 +1,11 @@
 <template>
   <div>
-      reset pass
+    reset pass
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
-</style>
+<style></style>

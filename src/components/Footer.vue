@@ -4,93 +4,111 @@
       <div class="container">
         <div class="row text-center text-xs-center text-sm-left text-md-left">
           <div class="col-xs-12 col-sm-12 col-lg-4">
-            <h5>Quick links</h5>
+            <h5>RASTE URGJENTE</h5>
             <ul class="list-unstyled quick-links">
               <li>
-                <a href="https://www.fiverr.com/share/qb8D02"
-                  ><i class="fa fa-angle-double-right"></i>Home</a
-                >
+                <a href="tel:192">
+                  <div class="d-flex justify-content-between">
+                    <div><i class="fas fa-phone-alt"></i> Policia</div>
+                    <div><strong>192</strong></div>
+                  </div>
+                </a>
               </li>
-              <li>
-                <a href="https://www.fiverr.com/share/qb8D02"
-                  ><i class="fa fa-angle-double-right"></i>About</a
-                >
+                <li>
+                <a href="tel:193">
+                  <div class="d-flex justify-content-between">
+                    <div><i class="fas fa-phone-alt"></i> Brigada zjarrëfikse</div>
+                    <div><strong>193</strong></div>
+                  </div>
+                </a>
               </li>
-              <li>
-                <a href="https://www.fiverr.com/share/qb8D02"
-                  ><i class="fa fa-angle-double-right"></i>FAQ</a
-                >
+                <li>
+                <a href="tel:194">
+                  <div class="d-flex justify-content-between">
+                    <div><i class="fas fa-phone-alt"></i> Ndihma e shpejtë</div>
+                    <div><strong>194</strong></div>
+                  </div>
+                </a>
               </li>
-              <li>
-                <a href="https://www.fiverr.com/share/qb8D02"
-                  ><i class="fa fa-angle-double-right"></i>Get Started</a
-                >
-              </li>
-              <li>
-                <a href="https://www.fiverr.com/share/qb8D02"
-                  ><i class="fa fa-angle-double-right"></i>Videos</a
-                >
+                <li>
+                <a href="tel:192">
+                  <div class="d-flex justify-content-between">
+                    <div><i class="fas fa-phone-alt"></i> Bashkesia Lokale</div>
+                    <div><strong>07xxxx</strong></div>
+                  </div>
+                </a>
               </li>
             </ul>
           </div>
           <div class="col-xs-12 col-sm-12 col-lg-4">
-            <h5>Quick links</h5>
+            <h5>Linqe</h5>
             <ul class="list-unstyled quick-links">
               <li>
-                <a href="https://www.fiverr.com/share/qb8D02"
-                  ><i class="fa fa-angle-double-right"></i>Home</a
+                <a href="http://gostivari.gov.mk/" target="_blank"
+                  ><i class="fa fa-angle-double-right"></i> Komuna e Gostivarit</a
                 >
               </li>
               <li>
-                <a href="https://www.fiverr.com/share/qb8D02"
-                  ><i class="fa fa-angle-double-right"></i>About</a
+                <a href="http://ombudsman.mk/SQ/default.aspx" target="_blank"
+                  ><i class="fa fa-angle-double-right"></i> Avokati i Popullit</a
                 >
               </li>
               <li>
-                <a href="https://www.fiverr.com/share/qb8D02"
-                  ><i class="fa fa-angle-double-right"></i>FAQ</a
+                <a href="https://www.sobranie.mk/home-al.nspx" target="_blank"
+                  ><i class="fa fa-angle-double-right"></i> Kuvendi i RVM</a
                 >
               </li>
               <li>
-                <a href="https://www.fiverr.com/share/qb8D02"
-                  ><i class="fa fa-angle-double-right"></i>Get Started</a
-                >
-              </li>
-              <li>
-                <a href="https://www.fiverr.com/share/qb8D02"
-                  ><i class="fa fa-angle-double-right"></i>Videos</a
+                <a href="https://sq.raporto.mk/" target="_blank"
+                  ><i class="fa fa-angle-double-right"></i> Raporto Ankesën</a
                 >
               </li>
             </ul>
           </div>
-          <div class="col-xs-12 col-sm-12 col-lg-4">
-            <h5>Quick links</h5>
+        <!--   <div class="col-xs-12 col-sm-12 col-lg-3">
+            <h5>Shërbimet elektronike</h5>
             <ul class="list-unstyled quick-links">
               <li>
-                <a href="https://www.fiverr.com/share/qb8D02"
-                  ><i class="fa fa-angle-double-right"></i>Home</a
+                 <a href="https://www.e-urbanizam.mk/najava.nspx" target="_blank"
+                  ><i class="fa fa-angle-double-right"></i> e-Urbanizimi</a
                 >
               </li>
               <li>
-                <a href="https://www.fiverr.com/share/qb8D02"
-                  ><i class="fa fa-angle-double-right"></i>About</a
+                 <a href="http://www.test.gradezno-zemjiste.mk/Default.aspx" target="_blank"
+                  ><i class="fa fa-angle-double-right"></i> e-Toka Ndërtimore</a
                 >
               </li>
               <li>
-                <a href="https://www.fiverr.com/share/qb8D02"
-                  ><i class="fa fa-angle-double-right"></i>FAQ</a
+                 <a href="http://62.162.98.17/e-tax/" target="_blank"
+                  ><i class="fa fa-angle-double-right"></i> e-Tatime</a
                 >
               </li>
               <li>
-                <a href="https://www.fiverr.com/share/qb8D02"
-                  ><i class="fa fa-angle-double-right"></i>Get Started</a
+                 <a href="https://www.gradezna-dozvola.mk/" target="_blank"
+                  ><i class="fa fa-angle-double-right"></i> e-Leje Ndërtimi</a
                 >
               </li>
               <li>
-                <a
-                  href="https://wwwe.sunlimetech.com"
-                  title="Design and developed by"
-                  ><i class="fa fa-angle-double-right"></i>Imprint</a
+                 <a href="https://gostivar.eregulations.org/?l=sq" target="_blank"
+                  ><i class="fa fa-angle-double-right"></i> e-Regullativa</a
+                >
+              </li>
+           
+            </ul>
+          </div> -->
+              <div class="col-xs-12 col-sm-12 col-lg-4">
+            <h5>Reth Faqes</h5>
+            <ul class="list-unstyled quick-links">
+            <span class="info">Faqja Cegrani.Mk është me burim te hapur, nëse ju keni njohuri për zhvillim të faqeve me teknologjitë moderne ju ftoj te jepni kontributin tuaj. Faqja përdor <strong>VueJs në FrontEnd</strong> dhe <strong>PHP (Laravel) në BackEnd</strong>.</span>
+            
+              <li class="mt-2">
+                <a href="https://github.com/armendzz/cegrani-frontend" target="_blank"
+                  ><i class="fa fa-angle-double-right"></i> Github - FrontEnd</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/armendzz/cegrani-backend" target="_blank"
+                  ><i class="fa fa-angle-double-right"></i> Github - BackEnd</a
                 >
               </li>
             </ul>
@@ -125,7 +143,10 @@ export default {};
 section {
   padding: 20px 0;
 }
-
+.info {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
 section .section-title {
   text-align: center;
   color: #1291cd;

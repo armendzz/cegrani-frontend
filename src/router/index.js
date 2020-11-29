@@ -5,7 +5,7 @@ import Login from "../views/auth/Login.vue";
 import Register from "../views/auth/Register.vue";
 import ResetPass from "../views/auth/ResetPass.vue";
 import Profile from "../views/Profile.vue";
-import Test from '../components/MultipleImageUpload.vue';
+import Test from "../components/MultipleImageUpload.vue";
 Vue.use(VueRouter);
 
 function guardMyroute(to, from, next) {
@@ -42,41 +42,41 @@ const routes = [
   {
     path: "/test",
     name: "Test",
-    component: Test,
+    component: Test
   },
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: Home
   },
   {
     path: "/profile",
     name: "Profile",
     beforeEnter: guardMyroute,
-    component: Profile,
+    component: Profile
   },
   {
     path: "/login",
     name: "Login",
     beforeEnter: ifLoggedInPerventLoginandRegister,
-    component: Login,
+    component: Login
   },
   {
     path: "/register",
     name: "Register",
     beforeEnter: ifLoggedInPerventLoginandRegister,
-    component: Register,
+    component: Register
   },
 
   {
     path: "/resetpass",
     name: "ResetPass",
-    component: ResetPass,
-  },
+    component: ResetPass
+  }
 ];
 
 const router = new VueRouter({
-  routes,
+  routes
 });
 
 export default router;

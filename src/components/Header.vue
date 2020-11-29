@@ -16,9 +16,11 @@
     </b-container>
     <b-navbar class="mt-3 " type="dark" id="menu" toggleable="lg">
       <b-container>
-       <router-link to="/"> <span class="hvr-icon-pulse nav-link" id="homeButton"
+        <router-link to="/">
+          <span class="hvr-icon-pulse nav-link" id="homeButton"
             ><i class="fas fa-home hvr-icon"></i> Fillimi</span
-          > </router-link>
+          >
+        </router-link>
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse class="ml-2 " id="nav-collapse" is-nav>
@@ -80,7 +82,10 @@
     </b-navbar>
     <div class="container">
       <!-- Todo: nese eshte i loguar nuk duhet te shfaqet -->
-      <div v-if="this.$store.state.currentUser.isLoggedIn === 0" class="alert alert-warning mt-2">
+      <div
+        v-if="this.$store.state.currentUser.isLoggedIn === 0"
+        class="alert alert-warning mt-2"
+      >
         Ju Mund te Regjistroheni ne kete faqe dhe te shperndani
         Fotot/Videot/Artikujt tuaja ne kete arhive te fshatit tone. (Autori qe
         poston do ti shfaqet Emri)

@@ -1,6 +1,6 @@
-// TODO 
+// TODO
 //   check if form is null
-//   check localstorage before getuser()
+//   check localstorage before getuser() -- DONE
 
 // eslint-disable-next-line
 import axios from "axios";
@@ -8,14 +8,16 @@ import axios from "axios";
 const state = {
   user: {},
   error: "",
-  isLoggedIn: 0
+  isLoggedIn: 0,
 };
 const getters = {};
 const actions = {
   getUser({ commit }) {
-    axios.get("http://localhost:8000/api/auth/user").then(response => {
-      commit("setUser", response.data);
-    });
+    if (localStorage.getItem("user_access_token") !== null) {
+      axios.get("http://localhost:8000/api/auth/user").then((response) => {
+        commit("setUser", response.data);
+      });
+    }
   },
 
   login({ commit }, credentials) {
@@ -23,9 +25,9 @@ const actions = {
       axios
         .post("http://localhost:8000/api/auth/login", {
           email: credentials.email,
-          password: credentials.password
+          password: credentials.password,
         })
-        .then(response => {
+        .then((response) => {
           if (response.data.access_token) {
             localStorage.setItem(
               "user_access_token",
@@ -43,29 +45,29 @@ const actions = {
             reject(response.data.message);
           }
         })
-        .catch(error => {
+        .catch((error) => {
           console.log(error);
           reject(error);
         });
     });
   },
 
-  logout({ commit }){
+  logout({ commit }) {
     // eslint-disable-next-line
-    axios.get("http://localhost:8000/api/auth/user").then(response => {
+    axios.get("http://localhost:8000/api/auth/user").then((response) => {
       commit("isLoggedIn", 0);
-      localStorage.removeItem("user_access_token")
+      localStorage.removeItem("user_access_token");
       delete axios.defaults.headers.common["Authorization"];
     });
   },
 
   checkAccessToken({ commit }) {
     if (localStorage.getItem("user_access_token") !== null) {
-        axios.defaults.headers.common["Authorization"] =
+      axios.defaults.headers.common["Authorization"] =
         "Bearer " + localStorage.getItem("user_access_token");
-        commit("isLoggedIn", 1);
-      }
-  }
+      commit("isLoggedIn", 1);
+    }
+  },
 };
 const mutations = {
   setUser(state, data) {
@@ -76,7 +78,7 @@ const mutations = {
   },
   isLoggedIn(state, data) {
     return (state.isLoggedIn = data);
-  }
+  },
 };
 
 export default {
@@ -84,5 +86,5 @@ export default {
   state,
   getters,
   actions,
-  mutations
+  mutations,
 };

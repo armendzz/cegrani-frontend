@@ -9,7 +9,9 @@
       />
 
       <div class="card-body">
-        <h5 class="card-title">{{ this.$store.state.currentUser.user.name }}</h5>
+        <h5 class="card-title">
+          {{ this.$store.state.currentUser.user.name }}
+        </h5>
       </div>
       <ul class="list-group list-group-flush">
         <a href="">
@@ -37,10 +39,10 @@
         <div class="row">
           <div class="col-sm-12 mb-1 col-lg-6">
             <router-link to="/profile">
-            <button class="btn btn-primary sm-mb-2">Profili Im</button>
+              <button class="btn btn-primary sm-mb-2">Profili Im</button>
             </router-link>
           </div>
-          
+
           <div class="col-sm-12 mb-1 col-lg-6">
             <button class="btn btn-danger" @click="logout()">C'Lajmrohu</button>
           </div>
@@ -52,10 +54,10 @@
 
 <script>
 export default {
-    methods: {
+  methods: {
     logout() {
-       this.$store.dispatch("currentUser/logout")
-    },
+      this.$store.dispatch("currentUser/logout");
+    }
   }
 };
 </script>

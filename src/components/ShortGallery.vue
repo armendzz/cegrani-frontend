@@ -7,14 +7,14 @@
         </div>
         <div class="row justify-content-center">
           <div
-            v-for="(image, i) in images"
+            v-for="(image, i) in lastTenImg"
             :key="i"
             class="image col-md-2 col-4"
           >
             <img class="img" :src="image.url" @click="index = i" />
           </div>
           <vue-gallery-slideshow
-            :images="images"
+            :images="lastTenImg"
             :index="index"
             @close="index = null"
           ></vue-gallery-slideshow>
@@ -30,7 +30,7 @@
 <script>
 // eslint-disable-next-line
 import VueGallerySlideshow from "vue-gallery-slideshow";
-import axios from 'axios';
+
 
 export default {
   components: {
@@ -38,14 +38,16 @@ export default {
   },
   data() {
     return {
-      images: [],
       index: null
     };
   },
-  mounted(){
-    axios.get("http://localhost:8000/api/gallery").then(response => {
-      this.images = response.data
-    });
+  mounted() {
+   
+  },
+  computed: {
+    lastTenImg() {
+      return this.$store.getters['gallery/lastTenImg']
+    }
   }
 };
 </script>

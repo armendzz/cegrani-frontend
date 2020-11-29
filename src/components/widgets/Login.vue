@@ -37,13 +37,13 @@ export default {
     return {
       form: {
         email: "",
-        password: "",
-      },
+        password: ""
+      }
     };
   },
   methods: {
     onSubmit() {
-       this.$store
+      this.$store
         .dispatch("currentUser/login", {
           email: this.form.email,
           password: this.form.password
@@ -57,7 +57,7 @@ export default {
         .catch(function(error) {
           console.log(error);
         });
-    },
+    }
   }
 };
 </script>

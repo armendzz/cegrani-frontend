@@ -17,6 +17,7 @@ export default {
   mounted() {
     this.$store.dispatch("currentUser/checkAccessToken");
     this.$store.dispatch("currentUser/getUser");
+    this.$store.dispatch("gallery/getGallery");
   }
 };
 </script>

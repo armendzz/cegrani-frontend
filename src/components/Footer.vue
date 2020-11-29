@@ -14,15 +14,17 @@
                   </div>
                 </a>
               </li>
-                <li>
+              <li>
                 <a href="tel:193">
                   <div class="d-flex justify-content-between">
-                    <div><i class="fas fa-phone-alt"></i> Brigada zjarrëfikse</div>
+                    <div>
+                      <i class="fas fa-phone-alt"></i> Brigada zjarrëfikse
+                    </div>
                     <div><strong>193</strong></div>
                   </div>
                 </a>
               </li>
-                <li>
+              <li>
                 <a href="tel:194">
                   <div class="d-flex justify-content-between">
                     <div><i class="fas fa-phone-alt"></i> Ndihma e shpejtë</div>
@@ -30,7 +32,7 @@
                   </div>
                 </a>
               </li>
-                <li>
+              <li>
                 <a href="tel:192">
                   <div class="d-flex justify-content-between">
                     <div><i class="fas fa-phone-alt"></i> Bashkesia Lokale</div>
@@ -45,12 +47,14 @@
             <ul class="list-unstyled quick-links">
               <li>
                 <a href="http://gostivari.gov.mk/" target="_blank"
-                  ><i class="fa fa-angle-double-right"></i> Komuna e Gostivarit</a
+                  ><i class="fa fa-angle-double-right"></i> Komuna e
+                  Gostivarit</a
                 >
               </li>
               <li>
                 <a href="http://ombudsman.mk/SQ/default.aspx" target="_blank"
-                  ><i class="fa fa-angle-double-right"></i> Avokati i Popullit</a
+                  ><i class="fa fa-angle-double-right"></i> Avokati i
+                  Popullit</a
                 >
               </li>
               <li>
@@ -65,7 +69,7 @@
               </li>
             </ul>
           </div>
-        <!--   <div class="col-xs-12 col-sm-12 col-lg-3">
+          <!--   <div class="col-xs-12 col-sm-12 col-lg-3">
             <h5>Shërbimet elektronike</h5>
             <ul class="list-unstyled quick-links">
               <li>
@@ -96,18 +100,28 @@
            
             </ul>
           </div> -->
-              <div class="col-xs-12 col-sm-12 col-lg-4">
+          <div class="col-xs-12 col-sm-12 col-lg-4">
             <h5>Reth Faqes</h5>
             <ul class="list-unstyled quick-links">
-            <span class="info">Faqja Cegrani.Mk është me burim te hapur, nëse ju keni njohuri për zhvillim të faqeve me teknologjitë moderne ju ftoj te jepni kontributin tuaj. Faqja përdor <strong>VueJs në FrontEnd</strong> dhe <strong>PHP (Laravel) në BackEnd</strong>.</span>
-            
+              <span class="info"
+                >Faqja Cegrani.Mk është me burim te hapur, nëse ju keni njohuri
+                për zhvillim të faqeve me teknologjitë moderne ju ftoj te jepni
+                kontributin tuaj. Faqja përdor
+                <strong>VueJs në FrontEnd</strong> dhe
+                <strong>PHP (Laravel) në BackEnd</strong>.</span
+              >
+
               <li class="mt-2">
-                <a href="https://github.com/armendzz/cegrani-frontend" target="_blank"
+                <a
+                  href="https://github.com/armendzz/cegrani-frontend"
+                  target="_blank"
                   ><i class="fa fa-angle-double-right"></i> Github - FrontEnd</a
                 >
               </li>
               <li>
-                <a href="https://github.com/armendzz/cegrani-backend" target="_blank"
+                <a
+                  href="https://github.com/armendzz/cegrani-backend"
+                  target="_blank"
                   ><i class="fa fa-angle-double-right"></i> Github - BackEnd</a
                 >
               </li>

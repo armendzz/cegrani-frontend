@@ -6,7 +6,7 @@
           <Featured-content />
           <Weather />
           <ShortGallery />
-           <div class="alert mt-2 alert-info" role="alert">
+          <div class="alert mt-2 alert-info" role="alert">
             Identifikohu autokton duke krijuar nje email address
             <strong>@cegrani.mk</strong>
             <br />
@@ -14,10 +14,13 @@
           </div>
         </div>
         <div class="col-lg-4 ">
-          <Login v-if="this.$store.state.currentUser.isLoggedIn === 0" class="mt-2" />
+          <Login
+            v-if="this.$store.state.currentUser.isLoggedIn === 0"
+            class="mt-2"
+          />
           <Profile v-else class="mt-2" />
           <Aqi class="mt-2" />
-           <Info class="mt-2" />
+          <Info class="mt-2" />
           <Ads class="mt-2" />
         </div>
       </div>

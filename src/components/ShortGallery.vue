@@ -11,7 +11,7 @@
             :key="i"
             class="image col-md-2 col-4"
           >
-            <img class="img" :src="image" @click="index = i" />
+            <img class="img" :src="image.url" @click="index = i" />
           </div>
           <vue-gallery-slideshow
             :images="images"
@@ -30,26 +30,22 @@
 <script>
 // eslint-disable-next-line
 import VueGallerySlideshow from "vue-gallery-slideshow";
+import axios from 'axios';
+
 export default {
   components: {
     VueGallerySlideshow
   },
   data() {
     return {
-      images: [
-        "https://placekitten.com/801/800",
-        "https://placekitten.com/802/800",
-        "https://placekitten.com/803/800",
-        "https://placekitten.com/804/900",
-        "https://placekitten.com/805/800",
-        "https://placekitten.com/806/800",
-        "https://placekitten.com/807/800",
-        "https://placekitten.com/808/800",
-        "https://placekitten.com/809/800",
-        "https://placekitten.com/810/800"
-      ],
+      images: [],
       index: null
     };
+  },
+  mounted(){
+    axios.get("http://localhost:8000/api/gallery").then(response => {
+      this.images = response.data
+    });
   }
 };
 </script>
@@ -66,7 +62,7 @@ export default {
   padding-left: 0px !important;
 }
 .img {
-  height: 100%;
+  height: 100px;
   border-radius: 10px;
   width: 100%;
   object-fit: cover;

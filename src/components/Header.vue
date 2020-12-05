@@ -153,7 +153,7 @@ export default {
   background-color: #f8f9fa;
   border-bottom: 2px solid lightgrey;
   color: #212529;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .dropdown-item:before {
   content: "";
@@ -267,5 +267,10 @@ export default {
 
 a {
   text-decoration: none !important;
+}
+
+.nav-link {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 </style>

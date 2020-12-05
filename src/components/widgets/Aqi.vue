@@ -3,19 +3,30 @@
     <div class="card">
       <div class="card-header">Kualiteti i Ajrit</div>
       <div class="card-body">
-        <div v-bind:class="{ shumMire: airQuality <= 50, mire: airQuality >= 51 && airQuality <= 100, deriDiku: airQuality >= 101 && airQuality <= 150, keq: airQuality >= 151 && airQuality <= 200, shumKeq: airQuality >= 201 && airQuality <= 300, hell: airQuality > 300  } " id="circle">{{ airQuality }} - AQI</div>
+        <div
+          v-bind:class="{
+            shumMire: airQuality <= 50,
+            mire: airQuality >= 51 && airQuality <= 100,
+            deriDiku: airQuality >= 101 && airQuality <= 150,
+            keq: airQuality >= 151 && airQuality <= 200,
+            shumKeq: airQuality >= 201 && airQuality <= 300,
+            hell: airQuality > 300
+          }"
+          id="circle"
+        >
+          {{ airQuality }} - AQI
+        </div>
         <div class="mt-2"></div>
         <span>Tabela sipas ngjyrave</span>
         <ul class="list-group list-group-flush">
-          <li class="shumMire liTable" width="80px"> Shum Mire</li>
-          <li class="mire liTable"> Mire</li>
-          <li class="deriDiku liTable"> Jo Keq</li>
-          <li class="keq liTable"> Keq</li>
-          <li class="shumKeq liTable"> Shum Keq</li>
-          <li class="hell liTable"> Hell</li>
-        
-      </ul>
-        <hr>
+          <li class="shumMire liTable" width="80px">Shum Mire</li>
+          <li class="mire liTable">Mire</li>
+          <li class="deriDiku liTable">Jo Keq</li>
+          <li class="keq liTable">Keq</li>
+          <li class="shumKeq liTable">Shum Keq</li>
+          <li class="hell liTable">Hell</li>
+        </ul>
+        <hr />
         <span>Stacioni Per matjen e ajrit gjendet ne Gostivar</span>
       </div>
     </div>
@@ -24,19 +35,17 @@
 
 <script>
 export default {
-  data(){
-    return {
-      
-    }
+  data() {
+    return {};
   },
-  mounted(){
-     this.$store.dispatch("othersData/getAir");
+  mounted() {
+    this.$store.dispatch("othersData/getAir");
   },
-    computed: {
+  computed: {
     airQuality() {
-      return this.$store.getters['othersData/air']
+      return this.$store.getters["othersData/air"];
     }
-  },
+  }
 };
 </script>
 
@@ -67,7 +76,7 @@ export default {
   color: #fff;
   background-color: #d40909;
 }
-.shumKeq{
+.shumKeq {
   color: #fff;
   background: #580b52;
 }

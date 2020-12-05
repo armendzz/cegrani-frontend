@@ -31,7 +31,6 @@
 // eslint-disable-next-line
 import VueGallerySlideshow from "vue-gallery-slideshow";
 
-
 export default {
   components: {
     VueGallerySlideshow
@@ -41,12 +40,10 @@ export default {
       index: null
     };
   },
-  mounted() {
-   
-  },
+  mounted() {},
   computed: {
     lastTenImg() {
-      return this.$store.getters['gallery/lastTenImg']
+      return this.$store.getters["gallery/lastTenImg"];
     }
   }
 };

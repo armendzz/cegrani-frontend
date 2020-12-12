@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row justify-content-center">
+    <div class="my-4 row justify-content-center">
       <div class="col-md-8">
         <div class="card">
           <div class="card-header">Example Component</div>
@@ -29,7 +29,7 @@ export default {
   data() {
     return {
       dropzoneOptions: {
-        url: "http://localhost:8000/api/gallery",
+        url: "https://api.cegrani.mk/api/gallery",
         thumbnailWidth: 150,
         headers: {
           Authorization: "Bearer " + localStorage.getItem("user_access_token")

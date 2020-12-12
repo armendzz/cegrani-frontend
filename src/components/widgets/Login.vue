@@ -24,7 +24,9 @@
           <b-button @click="onSubmit()" class="mr-2" variant="success"
             >Lajmerohu</b-button
           >
+           <router-link to="/register">
           <b-button variant="primary">Regjistrohu</b-button>
+           </router-link>
         </div>
       </div>
     </div>

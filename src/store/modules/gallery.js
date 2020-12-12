@@ -11,7 +11,7 @@ const getters = {
 };
 const actions = {
   getGallery({ commit }) {
-    axios.get("http://localhost:8000/api/gallery").then(response => {
+    axios.get("https://api.cegrani.mk/api/gallery").then(response => {
       commit("setGallery", response.data);
     });
   }

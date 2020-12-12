@@ -87,7 +87,7 @@ export default {
   methods: {
     register() {
       axios
-        .post(`http://localhost:8000/api/auth/signup`, {
+        .post(`https://api.cegrani.mk/api/auth/signup`, {
           name: this.user.name,
           email: this.user.email,
           password: this.user.password,

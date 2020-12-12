@@ -10,7 +10,9 @@
             Identifikohu autokton duke krijuar nje email address
             <strong>@cegrani.mk</strong>
             <br />
-            <a href="/mail">Kliko Ketu per te krijuar nje Email </a>
+            <router-link to="/mail">
+            Kliko Ketu per te krijuar nje Email </router-link
+                >
           </div>
         </div>
         <div class="col-lg-4 ">

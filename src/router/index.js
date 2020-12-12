@@ -5,7 +5,9 @@ import Login from "../views/auth/Login.vue";
 import Register from "../views/auth/Register.vue";
 import ResetPass from "../views/auth/ResetPass.vue";
 import Profile from "../views/Profile.vue";
-import Test from "../components/MultipleImageUpload.vue";
+import ImageUpload from "../components/MultipleImageUpload.vue";
+import Mail from '../views/Mail.vue';
+
 Vue.use(VueRouter);
 
 function guardMyroute(to, from, next) {
@@ -40,9 +42,15 @@ function ifLoggedInPerventLoginandRegister(to, from, next) {
 
 const routes = [
   {
-    path: "/test",
-    name: "Test",
-    component: Test
+    path: "/imageupload",
+    name: "ImageUpload",
+    beforeEnter: guardMyroute,
+    component: ImageUpload
+  },
+  {
+    path: "/mail",
+    name: "Mail",
+    component: Mail
   },
   {
     path: "/",

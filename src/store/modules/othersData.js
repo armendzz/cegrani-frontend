@@ -22,12 +22,12 @@ const getters = {
 };
 const actions = {
   getAir({ commit }) {
-    axios.get("http://localhost:8000/api/others/ajri").then(response => {
+    axios.get("https://api.cegrani.mk/api/others/ajri").then(response => {
       commit("setAir", response.data);
     });
   },
   getWeather({ commit }) {
-    axios.get("http://localhost:8000/api/others/weather").then(response => {
+    axios.get("https://api.cegrani.mk/api/others/weather").then(response => {
       commit("setWeather", response.data);
     });
   }

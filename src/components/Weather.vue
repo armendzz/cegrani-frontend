@@ -7,7 +7,7 @@
 
       <div class="row  mb-auto">
         <div class="col-sm-2 mb-auto" id="tempico">
-          <img
+          <img v-if="sotWeather"
             :src="require(`@/assets/icon/${sotWeather.iconCode}.png`)"
             alt
             class="icon"
@@ -15,7 +15,7 @@
         </div>
         <div class="col-sm-3 mb-auto" id="grada">
           <h1 id="baba">
-            <strong> {{ sotWeather.temperature }} °C</strong>
+            <strong v-if="sotWeather"> {{ sotWeather.temperature }} °C</strong>
           </h1>
         </div>
         <div class="col-sm-7  mb-auto" id="tjera">

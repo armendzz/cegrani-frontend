@@ -14,7 +14,7 @@ const getters = {};
 const actions = {
   getUser({ commit }) {
     if (localStorage.getItem("user_access_token") !== null) {
-      axios.get("http://localhost:8000/api/auth/user").then(response => {
+      axios.get("https://api.cegrani.mk/api/auth/user").then(response => {
         commit("setUser", response.data);
       });
     }
@@ -23,7 +23,7 @@ const actions = {
   login({ commit }, credentials) {
     return new Promise((resolve, reject) => {
       axios
-        .post("http://localhost:8000/api/auth/login", {
+        .post("https://api.cegrani.mk/api/auth/login", {
           email: credentials.email,
           password: credentials.password
         })
@@ -54,7 +54,7 @@ const actions = {
 
   logout({ commit }) {
     // eslint-disable-next-line
-    axios.get("http://localhost:8000/api/auth/user").then((response) => {
+    axios.get("https://api.cegrani.mk/api/auth/user").then((response) => {
       commit("isLoggedIn", 0);
       localStorage.removeItem("user_access_token");
       delete axios.defaults.headers.common["Authorization"];

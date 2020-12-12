@@ -16,22 +16,22 @@
       <ul class="list-group list-group-flush">
         <a href="">
           <li class="list-group-item">
-            <i class="fas fa-plus"></i> Posto Artikull
+            <i class="fas fa-plus"></i> Posto Artikull (ne perpunim)
           </li></a
         >
-        <a href=""
-          ><li class="list-group-item">
+        <router-link to="/imageupload">
+        <li class="list-group-item">
             <i class="fas fa-upload"></i> Ngarko Fotografi
+          </li>
+           </router-link>
+        <a href="">
+          <li class="list-group-item">
+            <i class="fas fa-cloud-upload-alt"></i> Ngarko Video - (ne perpunim)
           </li></a
         >
         <a href="">
           <li class="list-group-item">
-            <i class="fas fa-cloud-upload-alt"></i> Ngarko Video
-          </li></a
-        >
-        <a href="">
-          <li class="list-group-item">
-            <i class="far fa-edit"></i> Redakto Postimet
+            <i class="far fa-edit"></i> Redakto Postimet - (ne perpunim)
           </li></a
         >
       </ul>

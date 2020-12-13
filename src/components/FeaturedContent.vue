@@ -16,7 +16,7 @@
                   >
                     <img
                       class="img-fluid w-100"
-                      src="https://bootstrap.news/source/img1.jpg"
+                      src="https://api.cegrani.mk/gallery/1607815866-pTbX7NrIdA.jpg"
                       alt="Bootstrap news template"
                     />
                   </a>
@@ -64,7 +64,7 @@
                     >
                       <img
                         class="img-fluid"
-                        src="https://bootstrap.news/source/img5.jpg"
+                        src="https://api.cegrani.mk/gallery/1607815866-pTbX7NrIdA.jpg"
                         alt="simple blog template bootstrap"
                       />
                     </a>
@@ -101,7 +101,7 @@
                     >
                       <img
                         class="img-fluid"
-                        src="https://bootstrap.news/source/img6.jpg"
+                        src="https://api.cegrani.mk/gallery/1607815866-pTbX7NrIdA.jpg"
                         alt="bootstrap templates for blog"
                       />
                     </a>
@@ -137,7 +137,7 @@
                     >
                       <img
                         class="img-fluid"
-                        src="https://bootstrap.news/source/img7.jpg"
+                        src="https://api.cegrani.mk/gallery/1607815866-pTbX7NrIdA.jpg"
                         alt="bootstrap blog wordpress theme"
                       />
                     </a>
@@ -173,7 +173,7 @@
                     >
                       <img
                         class="img-fluid"
-                        src="https://bootstrap.news/source/img8.jpg"
+                        src="https://api.cegrani.mk/gallery/1607815866-pTbX7NrIdA.jpg"
                         alt="blog website templates bootstrap"
                       />
                     </a>

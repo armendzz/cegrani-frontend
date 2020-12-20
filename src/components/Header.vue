@@ -2,9 +2,37 @@
   <div>
     <div class="container">
       <div class="top-bar">
-        <span>{{ new Date() | moment("D MMMM YYYY") }} </span>
-        <span> E-mail@Cegrani.mk </span>
-        <span> Inbox </span>
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="row ml-1">
+              <div class="mr-2 ml-2">
+                <span id="data">{{ new Date() | moment("D MMMM YYYY") }} </span>
+              </div>
+              <div class="mr-2 ml-2">
+                <a
+                  href="https://mail.cegrani.mk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >WebMail @Cegrani.mk</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-7 d-none d-lg-block">
+            <div class="d-flex justify-content-end">
+              <router-link to="/register">
+                <span class="hvr-icon-pulse nav-link"
+                  ><i class="fas fa-fingerprint"></i> Regjistrohu</span
+                >
+              </router-link>
+              <router-link to="/login">
+                <span class="hvr-icon-pulse nav-link"
+                  ><i class="fas fa-sign-in-alt"></i> Lajmerohu</span
+                >
+              </router-link>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <b-container>
@@ -102,9 +130,9 @@ export default {
         email: "",
         name: "",
         food: null,
-        checked: []
+        checked: [],
       },
-      show: true
+      show: true,
     };
   },
   methods: {
@@ -122,8 +150,8 @@ export default {
       this.$nextTick(() => {
         this.show = true;
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -272,5 +300,10 @@ a {
 .nav-link {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+}
+
+#data {
+  color: black;
+  font-size: 1.1em;
 }
 </style>

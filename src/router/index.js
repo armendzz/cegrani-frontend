@@ -6,7 +6,12 @@ import Register from "../views/auth/Register.vue";
 import ResetPass from "../views/auth/ResetPass.vue";
 import Profile from "../views/Profile.vue";
 import ImageUpload from "../components/MultipleImageUpload.vue";
-import Mail from '../views/Mail.vue';
+import Mail from "../views/Mail.vue";
+import Page404 from "../views/404.vue";
+import AdminDashboard from "../views/admin/Dashboard.vue";
+import AdminCategory from "../views/admin/Category.vue";
+import Admin from "../views/admin/Admin.vue";
+import Admin404 from "../views/admin/Admin404.vue";
 
 Vue.use(VueRouter);
 
@@ -80,6 +85,55 @@ const routes = [
     path: "/resetpass",
     name: "ResetPass",
     component: ResetPass
+  },
+
+  {
+    path: "/admin",
+    name: "Admin",
+    meta: {
+      layout: "admin"
+    },
+    redirect: "/admin/dashboard",
+    component: Admin,
+    children: [
+      {
+        path: "category",
+        name: "AdminCategory",
+        meta: {
+          layout: "admin"
+        },
+        component: AdminCategory
+      },
+      {
+        path: "dashboard",
+        name: "AdminDashboard",
+        meta: {
+          layout: "admin"
+        },
+        component: AdminDashboard
+      },
+      {
+        path: "articles",
+        name: "AdminArticles",
+        meta: {
+          layout: "admin"
+        },
+        component: AdminCategory
+      },
+      {
+        path: "*",
+        name: "Admin404",
+        meta: {
+          layout: "admin"
+        },
+        component: Admin404
+      }
+    ]
+  },
+  {
+    path: "*",
+    name: "Page404",
+    component: Page404
   }
 ];
 

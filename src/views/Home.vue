@@ -105,8 +105,8 @@ export default {
     Profile,
     Ads,
     Aqi,
-    Info,
-  },
+    Info
+  }
 };
 </script>
 <style scoped></style>

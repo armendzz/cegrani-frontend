@@ -9,8 +9,8 @@
               Na vjen Keq, Ky email egziston në databazën tonë, ju lutem
               zgjidhni një tjetër
             </div>
-               <div v-if="password_doesnt_match" class="alert alert-danger">
-             Ju lutem verifikoni fjalkalimin, duhet te perputhen patjeter.
+            <div v-if="password_doesnt_match" class="alert alert-danger">
+              Ju lutem verifikoni fjalkalimin, duhet te perputhen patjeter.
             </div>
             <div>
               <label class="sr-only">Username</label>
@@ -114,29 +114,29 @@ export default {
       password_confimation: "",
       error: "",
       success: "",
-      password_doesnt_match: "",
+      password_doesnt_match: ""
     };
   },
   watch: {
     email: {
       handler: function() {
         this.error = "";
-      },
+      }
     },
     password: {
       handler: function() {
         if (this.password === this.password_confimation) {
-           this.password_doesnt_match = "";
+          this.password_doesnt_match = "";
         }
-      },
+      }
     },
     password_confimation: {
       handler: function() {
-         if (this.password === this.password_confimation) {
-           this.password_doesnt_match = "";
+        if (this.password === this.password_confimation) {
+          this.password_doesnt_match = "";
         }
-      },
-    },
+      }
+    }
   },
   methods: {
     createMail() {
@@ -145,9 +145,9 @@ export default {
           fullname: this.fullname,
           mail: this.email,
           password: this.password,
-          password_confirmation: this.password_confimation,
+          password_confirmation: this.password_confimation
         })
-          .then((response) => {
+          .then(response => {
             if (response.data[0].msg[0] == "object_exists") {
               this.error = 1;
             }
@@ -161,8 +161,8 @@ export default {
       } else {
         this.password_doesnt_match = 1;
       }
-    },
-  },
+    }
+  }
 };
 </script>
 

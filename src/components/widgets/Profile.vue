@@ -20,10 +20,10 @@
           </li></a
         >
         <router-link to="/imageupload">
-        <li class="list-group-item">
+          <li class="list-group-item">
             <i class="fas fa-upload"></i> Ngarko Fotografi
           </li>
-           </router-link>
+        </router-link>
         <a href="">
           <li class="list-group-item">
             <i class="fas fa-cloud-upload-alt"></i> Ngarko Video - (ne perpunim)

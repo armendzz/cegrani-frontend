@@ -7,7 +7,8 @@
 
       <div class="row  mb-auto">
         <div class="col-sm-2 mb-auto" id="tempico">
-          <img v-if="sotWeather"
+          <img
+            v-if="sotWeather"
             :src="require(`@/assets/icon/${sotWeather.iconCode}.png`)"
             alt
             class="icon"

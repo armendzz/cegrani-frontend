@@ -130,9 +130,9 @@ export default {
         email: "",
         name: "",
         food: null,
-        checked: [],
+        checked: []
       },
-      show: true,
+      show: true
     };
   },
   methods: {
@@ -150,8 +150,8 @@ export default {
       this.$nextTick(() => {
         this.show = true;
       });
-    },
-  },
+    }
+  }
 };
 </script>
 

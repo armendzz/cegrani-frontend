@@ -12,11 +12,12 @@ import AdminDashboard from "../views/admin/Dashboard.vue";
 import AdminCategory from "../views/admin/Category.vue";
 import Admin from "../views/admin/Admin.vue";
 import Admin404 from "../views/admin/Admin404.vue";
+import store from "../store";
 
 Vue.use(VueRouter);
+let isLogged = new Boolean();
 
 function guardMyroute(to, from, next) {
-  let isLogged = new Boolean();
   if (localStorage.getItem("user_access_token") === null) {
     isLogged = false;
   } else {
@@ -24,6 +25,14 @@ function guardMyroute(to, from, next) {
   }
 
   if (isLogged) {
+    next(); // allow to enter route
+  } else {
+    next("/login"); // go to '/login';
+  }
+}
+
+function guardAdminRoute(to, from, next) {
+  if (isLogged && store.getters["currentUser/isAdmin"] == 1) {
     next(); // allow to enter route
   } else {
     next("/login"); // go to '/login';
@@ -90,6 +99,7 @@ const routes = [
   {
     path: "/admin",
     name: "Admin",
+    beforeEnter: guardAdminRoute,
     meta: {
       layout: "admin"
     },

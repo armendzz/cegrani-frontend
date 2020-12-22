@@ -10,7 +10,11 @@ const state = {
   error: "",
   isLoggedIn: 0
 };
-const getters = {};
+const getters = {
+  isAdmin: state => {
+    return state.user.is_admin;
+  }
+};
 const actions = {
   getUser({ commit }) {
     if (localStorage.getItem("user_access_token") !== null) {

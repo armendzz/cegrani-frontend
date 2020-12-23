@@ -14,11 +14,10 @@
         </h5>
       </div>
       <ul class="list-group list-group-flush">
-        <a href="">
+        <router-link to="/article/create">
           <li class="list-group-item">
             <i class="fas fa-plus"></i> Posto Artikull (ne perpunim)
-          </li></a
-        >
+          </li></router-link>
         <router-link to="/imageupload">
           <li class="list-group-item">
             <i class="fas fa-upload"></i> Ngarko Fotografi

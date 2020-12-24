@@ -11,7 +11,8 @@ import { dom } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import axios from "axios";
 import VueAxios from "vue-axios";
-import CKEditor from '@ckeditor/ckeditor5-vue2';
+import wysiwyg from "vue-wysiwyg";
+
 
 dom.watch();
 library.add(fas, far);
@@ -20,8 +21,12 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.use(BootstrapVue);
 Vue.use(require("vue-moment"));
 Vue.use(VueAxios, axios);
-Vue.use( CKEditor );
-
+Vue.use(wysiwyg, {
+  image: {
+    uploadURL: "https://api.cegrani.mk/api/articleimages",
+    dropzoneOptions: {}
+  }
+});
 Vue.config.productionTip = false;
 
 new Vue({

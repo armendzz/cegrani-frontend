@@ -9,12 +9,8 @@
             type="text"
             placeholder="Titulli i artikullit"
           />
-          <ckeditor
-            height="202px"
-            :editor="editor"
-            v-model="editorData"
-            :config="editorConfig"
-          ></ckeditor>
+<wysiwyg v-model="myHTML" />
+
           <div class="form-row mt-2 align-items-center">
             <div class="col-auto my-1">
               <label class="mr-sm-2" for="inlineFormCustomSelect"
@@ -54,20 +50,22 @@
 </template>
 
 <script>
-import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
-
 
 export default {
+ 
+
   data() {
     return {
-      editor: ClassicEditor,
-      editorData: "<p>Content of the editor.</p>",
-      editorConfig: {
-       
-      },
-    };
+      editorContent: 'Initial Content'
+    }
   },
+   methods: {
+     
+  }
 };
 </script>
 
-<style></style>
+<style>
+@import "~vue-wysiwyg/dist/vueWysiwyg.css";
+
+</style>

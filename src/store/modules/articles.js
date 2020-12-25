@@ -4,7 +4,9 @@ const state = {
   articles: []
 };
 const getters = {
-  // 10 fotot e fundit, per home page
+  lastFourArticles: state => {
+    return state.articles.slice(0, 4);
+  }
 };
 const actions = {
   getArticles({ commit }) {

@@ -69,7 +69,49 @@
               </div>
             </div>
           </div>
+                    <div class="row">
+            <div class="col-md-6">
+              <div class="card mt-2">
+                <div class="card-header">Historia</div>
+                  <img class="card-img-top pr-2 pt-2 pl-2" src="https://api.cegrani.mk/gallery/articles/1608828565-Y1FtFu3Wku.jpg" alt="Card image cap">
+                <div class="card-body">
+                  asd
+                </div>
+                <div class="card-footer">Me shume nga: Personalitete</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+               <div class="card mt-2">
+                <div class="card-header">Personalitete</div>
+                <div class="card-body">
+                  asd
+                </div>
+                <div class="card-footer">Me shume nga: Personalitete</div>
+              </div>
+            </div>
+          </div>
           <ShortGallery />
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card mt-2">
+                <div class="card-header">Historia</div>
+                  <img class="card-img-top pr-2 pt-2 pl-2" src="https://api.cegrani.mk/gallery/articles/1608828565-Y1FtFu3Wku.jpg" alt="Card image cap">
+                <div class="card-body">
+                  asd
+                </div>
+                <div class="card-footer">Me shume nga: Personalitete</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+               <div class="card mt-2">
+                <div class="card-header">Personalitete</div>
+                <div class="card-body">
+                  asd
+                </div>
+                <div class="card-footer">Me shume nga: Personalitete</div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="col-lg-4 ">
           <Login

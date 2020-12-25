@@ -49,154 +49,49 @@
           </div>
         </div>
         <!--End slider news-->
-
+  
         <!--Start box news-->
         <div class="col-12 col-md-6 pt-2 pl-md-1 mb-3 mb-lg-4">
           <div class="row">
             <!--news box-->
-            <div class="col-6 pb-1 pt-0 pr-1">
+            <div class="col-6 pb-1 pt-0 pr-1"  v-for="(article, i) in lastFourArticles"
+            :key="i" >
               <div class="card border-0 rounded-0 text-white overflow zoom">
                 <div class="position-relative">
                   <!--thumbnail img-->
                   <div class="ratio_right-cover-2 image-wrapper">
-                    <a
-                      href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"
-                    >
+                   <router-link :to="'/article/' + article.slug">
                       <img
                         class="img-fluid"
-                        src="https://api.cegrani.mk/gallery/1607815866-pTbX7NrIdA.jpg"
+                        :src="'https://api.cegrani.mk/images/' + article.images"
                         alt="simple blog template bootstrap"
+                        style="height:132px;"
                       />
-                    </a>
+                     </router-link>
                   </div>
                   <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                     <!-- category -->
-                    <a
-                      class="p-1 badge badge-primary rounded-0"
-                      href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"
-                      >Lifestyle</a
-                    >
+                    <router-link class="p-1 badge badge-primary rounded-0" :to="'/category/' + article.category.slug">
+                    {{ article.category.name }} </router-link>
 
                     <!--title-->
-                    <a
-                      href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"
-                    >
+                    <router-link :to="'/article/' + article.slug">
                       <h2 class="font-size text-white my-1">
-                        Should you see the Fantastic Beasts sequel?
+                        {{article.title.slice(0, 30) + '...'}}
                       </h2>
-                    </a>
+                    </router-link>
                   </div>
                 </div>
               </div>
             </div>
 
             <!--news box-->
-            <div class="col-6 pb-1 pl-1 pt-0">
-              <div class="card border-0 rounded-0 text-white overflow zoom">
-                <div class="position-relative">
-                  <!--thumbnail img-->
-                  <div class="ratio_right-cover-2 image-wrapper">
-                    <a
-                      href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"
-                    >
-                      <img
-                        class="img-fluid"
-                        src="https://api.cegrani.mk/gallery/1607815866-pTbX7NrIdA.jpg"
-                        alt="bootstrap templates for blog"
-                      />
-                    </a>
-                  </div>
-                  <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
-                    <!-- category -->
-                    <a
-                      class="p-1 badge badge-primary rounded-0"
-                      href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"
-                      >Motocross</a
-                    >
-                    <!--title-->
-                    <a
-                      href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"
-                    >
-                      <h2 class="font-size text-white my-1">
-                        Three myths about Florida elections recount
-                      </h2>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <!--  -->
 
             <!--news box-->
-            <div class="col-6 pb-1 pr-1 pt-1">
-              <div class="card border-0 rounded-0 text-white overflow zoom">
-                <div class="position-relative">
-                  <!--thumbnail img-->
-                  <div class="ratio_right-cover-2 image-wrapper">
-                    <a
-                      href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"
-                    >
-                      <img
-                        class="img-fluid"
-                        src="https://api.cegrani.mk/gallery/1607815866-pTbX7NrIdA.jpg"
-                        alt="bootstrap blog wordpress theme"
-                      />
-                    </a>
-                  </div>
-                  <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
-                    <!-- category -->
-                    <a
-                      class="p-1 badge badge-primary rounded-0"
-                      href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"
-                      >Fitness</a
-                    >
-                    <!--title-->
-                    <a
-                      href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"
-                    >
-                      <h2 class="font-size text-white my-1">
-                        Finding Empowerment in Two Wheels and a Helmet
-                      </h2>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
 
-            <!--news box-->
-            <div class="col-6 pb-1 pl-1 pt-1">
-              <div class="card border-0 rounded-0 text-white overflow zoom">
-                <div class="position-relative">
-                  <!--thumbnail img-->
-                  <div class="ratio_right-cover-2 image-wrapper">
-                    <a
-                      href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"
-                    >
-                      <img
-                        class="img-fluid"
-                        src="https://api.cegrani.mk/gallery/1607815866-pTbX7NrIdA.jpg"
-                        alt="blog website templates bootstrap"
-                      />
-                    </a>
-                  </div>
-                  <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
-                    <!-- category -->
-                    <a
-                      class="p-1 badge badge-primary rounded-0"
-                      href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"
-                      >Adventure</a
-                    >
-                    <!--title-->
-                    <a
-                      href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"
-                    >
-                      <h2 class="font-size text-white my-1">
-                        Ditch receipts and four other tips to be a shopper
-                      </h2>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+           
             <!--end news box-->
           </div>
         </div>
@@ -209,7 +104,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    lastFourArticles() {
+      return this.$store.getters["articles/lastFourArticles"];
+    } 
+  }
+}
 </script>
 
 <style scoped>

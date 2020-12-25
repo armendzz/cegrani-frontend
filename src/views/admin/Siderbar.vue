@@ -13,11 +13,11 @@
 
       <div class="card-body">
         <ul class="list-group list-group-flush">
-          <a href="">
+          <router-link to="/admin/articles">
             <li class="list-group-item">
               Articles
-            </li></a
-          >
+            </li>
+            </router-link>
           <router-link to="/admin/category">
             <li class="list-group-item">
               Category

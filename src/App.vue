@@ -28,6 +28,7 @@ export default {
     this.$store.dispatch("currentUser/getUser");
     this.$store.dispatch("gallery/getGallery");
     this.$store.dispatch("category/getCategory");
+    this.$store.dispatch("articles/getArticles");
   }
 };
 </script>

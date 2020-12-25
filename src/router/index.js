@@ -14,6 +14,8 @@ import Admin from "../views/admin/Admin.vue";
 import Admin404 from "../views/admin/Admin404.vue";
 import store from "../store";
 import CreateArticle from '../views/articles/CreateArticle.vue';
+import AdminArticles from '../views/admin/Articles.vue';
+import ShowArticle from '../views/articles/Show.vue';
 
 Vue.use(VueRouter);
 let isLogged = new Boolean();
@@ -129,7 +131,7 @@ const routes = [
         meta: {
           layout: "admin"
         },
-        component: AdminCategory
+        component: AdminArticles
       },
       {
         path: "*",
@@ -143,8 +145,14 @@ const routes = [
   },
   {
     path: "/article/create",
+    beforeEnter: guardMyroute,
     name: "CreateArticle",
     component: CreateArticle
+  },
+  {
+    path: "/article/:slug",
+    name: "ShowArticle",
+    component: ShowArticle
   },
   {
     path: "*",

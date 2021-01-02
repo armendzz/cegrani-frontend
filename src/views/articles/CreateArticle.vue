@@ -70,6 +70,7 @@
           </button>
         </div>
       </div>
+      
     </div>
   </div>
 </template>
@@ -80,7 +81,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      editorContent: "Initial Content",
+      editorContent: "",
       title: "",
       file: "",
       category: "4",
